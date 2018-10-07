@@ -17,40 +17,44 @@
 		<nav class="main-nav">
 			<h2 class="visually-hidden">меню навигации</h2>
 			<ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        </li>
 				<li class="main-nav__item">
-					<a href="catalog.html">Каталог товаров</a></li>
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
 				<li class="main-nav__item">
-					<a href="form.html">Вязание на заказ</a></li>
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
+        </li>
 				<li class="main-nav__item">
-					<a href="#"><img src="" alt="">Поиск по сайту</a></li>
-				<li class="main-nav__item">
-					<a href="#"><img src="" alt="">Корзина: пока пуста</a></li>
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+        </li>
 			</ul>
 	    </nav>
+      <ul class="page-header__block">
+        <li class="page-header__item">
+          <a class="page-header__link" href="#">Новые поступления</a>
+          <a class="page-header__link" href="#">Распродажа</a>
+          <span class="page-header__text">Бесплатная доставка по России</span>
+        </li>
+      </ul>
 	</header>
 	<h1 class="visually-hidden">Лучший интернет магазин детских игрушек !!!</h1>
 	<main class="page-main">
 		<section class="catalog">
-			<ul class="catalog__list">
-				<li class="catalog__item">
-					<a class="catalog__link" href="#">Новые поступления</a>
-				    <a class="catalog__link" href="#">Распродажа</a>
-				    <span class="catalog__text">Бесплатная доставка по России</span>
-			    </li>
-			</ul>
-			<h2 class="catalog__title">Милые штуки ручной работы для дома</h2>
-			<a href="#" class="catalog__interior" aria-label="Предметы интерьера">
-				<div class="catalog__block catalog__block--interior">
-					<span class="catalog__span">Предметы интерьера</span>
-				    <img src="" alt="">
-			    </div>
-		    </a>
+      <h2 class="catalog__title">Милые штуки ручной работы для дома</h2>
+      <div class="catalog__block catalog__block--interior">
+        <a href="#" class="catalog__interior" aria-label="Предметы интерьера">
+          <span class="catalog__span">Предметы интерьера</span>
+				  <img src="" alt="">
+        </a>
+      </div>
+      <div class="catalog__block catalog__block--toys">
 		    <a href="#" class="catalog__toys" aria-label="Детские игрушки">
-		    	<div class="catalog__block catalog__block--toys">
-				    <span class="catalog__span">Детские игрушки</span>
-				    <img src="" alt="">
-			    </div>
-			</a>
+		    	<span class="catalog__span">Детские игрушки</span>
+				  <img src="" alt="">
+			 </a>
+      </div>
 		</section>
 		<section class="best-product">
 			<h2 class="visually-hidden">Товар недели</h2>
@@ -80,34 +84,27 @@
 			<div class="about-us__block">
 				<ul class="about-us__list">
 					<li class="about-us__item">
-						<img src="" alt="" class="about-us__img">
 						<p class="about-us__text">Экологически чистые материалы</p>
 					</li>
 					<li class="about-us__item">
-						<img src="" alt="" class="about-us__img">
 						<p class="about-us__text">Скандинавский стиль по российской цене</p>
 					</li>
 					<li class="about-us__item">
-						<img src="" alt="" class="about-us__img">
 						<p class="about-us__text">Увеличивает лайки на фотографиях</p>
 					</li>
 					<li class="about-us__item">
-						<img src="" alt="" class="about-us__img">
 						<p class="about-us__text">Связано вручную с любовью и умилением</p>
 					</li>
 					<li class="about-us__item">
-						<img src="" alt="" class="about-us__img">
 						<p class="about-us__text">Поддержка отечественного производителя</p>
 					</li>
 					<li class="about-us__item">
-						<img src="" alt="" class="about-us__img">
 						<p class="about-us__text">Поставляется в подарочной упаковке</p>
 					</li>
 				</ul>
 			</div>
 		</section>
 		<section class="reviews">
-			<h2 class="visually-hidden">Отзывы</h2>
 			<h2 class="reviews__title">Отзывы</h2>
 			<p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 			<ul class="reviews__block">
@@ -120,10 +117,9 @@
 			    <button type="button" class="reviews__arrow__left"></button>
 			    <button type="button" class="reviews__arrow__right"></button>
 			</div>
-			<button type="button"></button>
+			<button type="button">Написать</button>
 		</section>
 		<section class="contacts">
-			<h2 class="visually-hidden">Контакты</h2>
 			<h2 class="contacts__title">Контакты</h2>
 			<table class="contacts__table">
 				<tr class="contacts__list">
@@ -139,10 +135,10 @@
 			</table>
 			<div class="contacts__map">
 				<iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/-/CBq8mFabcB" frameborder="0" width="320" height="458"></iframe>
-				<button type="button" class="contacts__button">Напишите нам</button>
+				<a class="contacts__button">Напишите нам</a>
 			</div>
 		</section>
-		
+
 	</main>
 	<footer class="page-footer">
 			<h2 class="visually-hidden">Ссылки на социальные сети</h2>
@@ -162,13 +158,18 @@
 
 	<section class="select-size">
 		<h3 class="select-size__title">Добавить в корзину</h3>
-	    <span class="select-size__text">Выберите размер:</span>
-	    <ul class="select-size__list">
-		   <li class="select-size__item">S</li>
-		   <li class="select-size__item">M</li>
-		   <li class="select-size__item">L</li>
-	    </ul>
-	    <button class="select-size__btn" type="button">Добавить</button>	
+    <form class="select-size__form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="select-size__block">
+          <legend class="select-size__legend">Выберите размер:</legend>
+          <input class="select-size__radio" type="radio" id="s" name="size">
+          <label class="select-size__label" for="s">s</label>
+          <input class="select-size__radio" type="radio" id="m" name="size">
+          <label class="select-size__label" for="m">m</label>
+          <input class="select-size__radio" type="radio" id="l" name="size">
+          <label class="select-size__label" for="l">l</label>
+        </fieldset>
+        <button class="select-size__btn" type="button">Добавить</button>
+      </form>
 	</section>
 </body>
 </html>

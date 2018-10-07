@@ -4,6 +4,7 @@
   "description": "«Мишка»",
   "main": "index.js",
   "dependencies": {
+    "editorconfig-cli": "^0.2.1",
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {

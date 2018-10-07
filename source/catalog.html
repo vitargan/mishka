@@ -18,60 +18,65 @@
 			<h2 class="visually-hidden">меню навигации</h2>
 			<ul class="main-nav__list">
 				<li class="main-nav__item">
-					<a>Каталог товаров</a></li>
+          <a class="main-nav__link">Каталог товаров</a>
+        </li>
 				<li class="main-nav__item">
-					<a href="form.html">Вязание на заказ</a></li>
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
 				<li class="main-nav__item">
-					<a href="#"><img src="" alt="">Поиск по сайту</a></li>
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
+        </li>
 				<li class="main-nav__item">
-					<a href="#"><img src="" alt="">Корзина: пока пуста</a></li>
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+        </li>
 			</ul>
 	    </nav>
+      <ul class="page-header__block">
+        <li class="page-header__item">
+          <a class="page-header__link" href="#">Новые поступления</a>
+          <a class="page-header__link" href="#">Распродажа</a>
+          <span class="page-header__text">Бесплатная доставка по России</span>
+        </li>
+      </ul>
 	</header>
 	<h1 class="visually-hidden">Лучший интернет магазин детских игрушек !!!</h1>
 	<main>
 		<section class="product-catalog">
-			<ul class="product-catalog__list">
-				<li class="product-catalog__item">
-					<a class="product-catalog__link" href="#">Новые поступления</a>
-				    <a class="product-catalog__link" href="#">Распродажа</a>
-				    <span class="product-catalog__text">Бесплатная доставка по России</span>
-			    </li>
-			</ul>
 			<h2 class="product-catalog__title">Каталог товаров</h2>
 		</section>
 		<section class="product">
-			<div class="product__block">
-				<a class="product__link" href="#" aria-label="Зайчик-попрыгайчик">
-				   <img class="product__img" src="" alt="">
-				   <span class="product__name">Зайчик-попрыгайчик</span>
-			    </a>
-			    <b class="product__characteristic">Рост 30 см, вес 200 г</b>
-			    <div class="product__list">
-			    	<span class="product__price">1 200 руб.</span>
-			    	<img class="product__basket" src="" alt="">
+			<div class="bunny bunny__block">
+        <a class="bunny__img__link" href="#">
+          <img class="bunny__img" src="" alt=""></a>
+        <a class="bunny__link" href="#" aria-label="Зайчик-попрыгайчик">
+				  <span class="bunny__name">Зайчик-попрыгайчик</span>
+        </a>
+			    <b class="bunny__characteristic">Рост 30 см, вес 200 г</b>
+          <div class="bunny__list">
+			    	<span class="bunny__price">1 200 руб.</span>
+			    	<img class="bunny__basket" src="" alt="">
 			    </div>
 			</div>
-			<div class="product__block">
-				<a class="product__link" href="#" aria-label="Корзинка для белья">
-				   <img class="product__img" src="" alt="">
-				   <span class="product__name">Корзинка для белья</span>
-			    </a>
-			    <b class="product__characteristic">Диаметр 15 см, высота 10 см</b>
-			    <div class="product__list">
-			    	<span class="product__price">690 руб.</span>
-			    	<img class="product__basket" src="" alt="">
+			<div class="laundry-basket laundry-basket__block">
+        <a class="laundry-basket__img__link" href=""><img class="laundry-basket__img" src="" alt=""></a>
+				<a class="laundry-basket__link" href="#" aria-label="Корзинка для белья">
+          <span class="laundry-basket__name">Корзинка для белья</span>
+			  </a>
+			    <b class="laundry-basket__characteristic">Диаметр 15 см, высота 10 см</b>
+			    <div class="laundry-basket__list">
+			    	<span class="laundry-basket__price">690 руб.</span>
+			    	<img class="laundry-basket__basket" src="" alt="">
 			    </div>
 			</div>
-			<div class="product__block">
-				<a class="product__link" href="#" aria-label="Большая корзинка для игрушек">
-				   <img class="product__img" src="" alt="">
-				   <span class="product__name">Большая корзинка для игрушек</span>
-			    </a>
-			    <b class="product__characteristic">Диаметр 30 см, высота 30 см</b>
-			    <div class="product__list">
-			    	<span class="product__price">1 500 руб.</span>
-			    	<img class="product__basket" src="" alt="">
+			<div class="toy-basket toy-basket__block">
+        <a class="toy-basket__img__link" href=""><img class="toy-basket__img" src="" alt=""></a>
+        <a class="toy-basket__link" href="#" aria-label="Большая корзинка для игрушек">
+          <span class="toy-basket__name">Большая корзинка для игрушек</span>
+			  </a>
+			    <b class="toy-basket__characteristic">Диаметр 30 см, высота 30 см</b>
+			    <div class="toy-basket__list">
+			    	<span class="toy-basket__price">1 500 руб.</span>
+			    	<img class="toy-basket__basket" src="" alt="">
 			    </div>
 			</div>
 		</section>
@@ -101,6 +106,22 @@
 				<a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__logo" aria-label="сайт академии"><img src="" alt=""></a>
 			</div>
 		</footer>
-	
+
+    <section class="select-size">
+      <h3 class="select-size__title">Добавить в корзину</h3>
+      <form class="select-size__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="select-size__block">
+          <legend class="select-size__legend">Выберите размер:</legend>
+          <input class="select-size__radio" type="radio" id="s" name="size">
+          <label class="select-size__label" for="s">s</label>
+          <input class="select-size__radio" type="radio" id="m" name="size">
+          <label class="select-size__label" for="m">m</label>
+          <input class="select-size__radio" type="radio" id="l" name="size">
+          <label class="select-size__label" for="l">l</label>
+        </fieldset>
+        <button class="select-size__btn" type="button">Добавить</button>
+      </form>
+    </section>
+
 </body>
 </html>
