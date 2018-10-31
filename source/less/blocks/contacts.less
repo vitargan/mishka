@@ -1,0 +1,102 @@
+.contacts {
+  min-height: 860px;
+  width: 100%;
+  background-color: @background-header;
+}
+
+.contacts__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  color: @about-us__color;
+  margin: 0;
+  margin-top: 25px;
+  margin-left: 30px;
+  margin-bottom: 24px;
+}
+
+.contacts__table {
+  margin-left: 30px;
+  margin-bottom: 32px;
+}
+
+.contacts__item {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: @reviews__btn;
+}
+
+.contacts__list {
+  display: flex;
+}
+
+.contacts__mail {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: @reviews__btn;
+  border-bottom: 1px solid @catalog__block--interior;
+  margin-left: 24px;
+
+  &:hover {
+    color: @catalog__block--interior;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__list--email {
+  margin-bottom: 28px;
+}
+
+.contacts__item--street {
+  display: block;
+  width: 175px;
+}
+
+.contacts__item--address {
+  margin-right: 26px;
+}
+
+.contacts__wrapper {
+  width: @mobail-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contacts__map {
+  background-image: url("../img/map-mobile@1x.jpg");
+  width: 320px;
+  height: 457px;
+  background-repeat: no-repeat;
+}
+
+.contacts__button {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: @reviews__btn;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid @best-product__description;
+  width: 260px;
+  height: 53px;
+  display: block;
+  margin-left: 30px;
+  margin-top: 34px;
+  padding-top: 14px;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: @best-product__description;
+    color: @background-body;
+  }
+
+  &:active {
+    color: @best-product__btn__color;
+  }
+}
