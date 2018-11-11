@@ -1,0 +1,116 @@
+.process-product {
+  min-height: 560px;
+  width: 100%;
+  background-color: @background-header;
+}
+
+.process-product__block {
+  border: 1px solid #ececec;
+  width: 260px;
+  min-height: 499px;
+  margin-left: 30px;
+}
+
+.process-product__list {
+  min-height: 94px;
+  width: 260px;
+  position: relative;
+  margin: 0;
+  padding-top: 23px;
+  padding-left: 90px;
+  box-sizing: border-box;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 29px;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    top: 28px;
+    left: 33px;
+  }
+}
+
+.process-product__span {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: @process-product__title;
+}
+
+.process-product__video {
+  width: 260px;
+  min-height: 150px;
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 101px;
+    height: 77px;
+    background-image: url("../img/icon-play.svg");
+    background-repeat: no-repeat;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -35px;
+    cursor: pointer;
+  }
+}
+
+.process-product__video:hover::before {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+
+.process-product__video:active::before {
+  transform: scale(0.8);
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.process-product__text {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 300;
+  color: @best-product__description;
+  width: 260px;
+  min-height: 135px;
+  padding-top: 11px;
+  padding-left: 34px;
+  padding-right: 47px;
+  box-sizing: border-box;
+}
+
+.process-product__btn {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: @best-product__description;
+  text-transform: uppercase;
+  border: 2px solid @best-product__description;
+  width: 192px;
+  height: 53px;
+  display: inline-block;
+  margin-left: 33px;
+  margin-top: 8px;
+  background-color: transparent;
+
+  &:hover {
+    background-color: @best-product__description;
+    color: @background-body;
+  }
+
+  &:active {
+    color: @best-product__btn__color;
+  }
+}
+
+.process-product__wrapper {
+  width: @mobail-width;
+  margin-right: auto;
+  margin-left: auto;
+}
