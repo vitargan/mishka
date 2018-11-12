@@ -34,3 +34,11 @@ a {
   display: none;
   margin: 0;
 }
+.page-header {
+  min-height: 395px;
+  width: 100%;
+  background: red;
+}
+.page-header__list {
+  height: 79px;
+}

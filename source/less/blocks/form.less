@@ -1,0 +1,350 @@
+.form {
+  min-height: 1495px;
+  width: 100%;
+  background-color: @background-body;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__block {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid @form__legend;
+  width: 260px;
+}
+
+.form__list {
+  list-style: none;
+  margin: 0;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__legend {
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: bold;
+  color: @form__legend;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  padding-right: 29px;
+  padding-top: 7px;
+  padding-left: 29px;
+}
+
+.form__label {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  color: @form__label;
+  position: relative;
+}
+
+.form__legend-radio {
+  padding-left: 29px;
+}
+
+.form__item--radio {
+  padding-left: 53px;
+  padding-right: 19px;
+  padding-top: 33px;
+}
+
+.form__item--radio:nth-child(2) {
+  padding-top: 26px;
+}
+
+.form__list--radio {
+  min-height: 150px;
+}
+
+.form__input--radio {
+  display: none;
+}
+
+.form__input--radio + .form__label--radio::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 2px solid @form__label;
+  border-radius: 50px;
+  height: 36px;
+  width: 36px;
+  left: -64px;
+  top: -9px;
+  vertical-align: middle;
+}
+
+.form__input--radio + .form__label--radio:hover::before {
+  border: 2px solid @form__legend;
+}
+
+.form__input--radio + .form__label--radio:active::before {
+  border: 2px solid @form__label;
+  opacity: 0.3;
+}
+
+.form__input--radio:checked + .form__label--radio::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 2px solid @form__legend;
+  background-color: @form__legend;
+  border-radius: 50px;
+  height: 15px;
+  width: 15px;
+  left: -53px;
+  top: 2px;
+  vertical-align: middle;
+}
+
+.form__list--checkbox {
+  min-height: 317px;
+}
+
+.form__input--checkbox {
+  display: none;
+}
+
+.form__input--checkbox + .form__label--checkbox::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 2px solid @form__label;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  vertical-align: middle;
+  left: -62px;
+  top: -12px;
+}
+
+.form__input--checkbox + .form__label--checkbox:hover::before {
+  border: 2px solid @form__legend;
+}
+
+.form__input--checkbox + .form__label--checkbox:active::before {
+  opacity: 0.3;
+  border: 2px solid @form__label;
+}
+
+.form__input--checkbox:checked + .form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 4px;
+  height: 44px;
+  width: 32px;
+  left: -60px;
+  top: -14px;
+}
+
+.form__item--checkbox {
+  margin-bottom: 43px;
+  margin-left: 52px;
+}
+
+.form__item--checkbox:nth-child(1) {
+  margin-top: 33px;
+}
+
+.form__item--checkbox:nth-child(6) {
+  margin-bottom: 37px;
+}
+
+.form__list--name {
+  min-height: 280px;
+  padding-left: 30px;
+}
+
+.form__item--name {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label--name {
+  margin-top: 25px;
+}
+
+.form__input--name {
+  border: none;
+  border-bottom: 2px solid @form__label;
+  height: 46px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 300;
+  position: relative;
+
+  &:hover {
+    border-bottom: 2px solid @form__legend;
+  }
+
+  &:active {
+    border-bottom: 2px solid @form__legend;
+  }
+}
+
+.form__list--contacts {
+  padding: 0;
+  margin-left: 13px;
+  margin-top: 25px;
+}
+
+.form__item--contacts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form__item--contacts:nth-child(2) {
+  margin-top: 32px;
+}
+
+.form__input--name::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.form__block--contacts {
+  border: none;
+}
+
+.form__label--contacts {
+  text-transform: uppercase;
+  color: @form__legend;
+  width: 284px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 200px;
+    background-color: @form__legend;
+    right: 0;
+    top: 50%;
+  }
+}
+
+.form__label--contacts:nth-child(1) {
+  width: 266px;
+}
+
+.form__input--contacts {
+  border: none;
+  border-bottom: 2px solid @form__label;
+  height: 54px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 300;
+
+  &:hover {
+    border-bottom: 2px solid @form__legend;
+  }
+
+  &:active {
+    border-bottom: 2px solid @form__legend;
+  }
+}
+
+.form__svg {
+  position: absolute;
+  top: 33px;
+  right: 3px;
+  opacity: 0.3;
+
+  &:hover {
+    fill: @form__legend;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @form__legend;
+    opacity: 1;
+  }
+}
+
+.form__block--textarea {
+  margin-top: 16px;
+  margin-left: 30px;
+}
+
+.form__legend--textarea {
+  padding-left: 0;
+}
+
+.form__textarea {
+  border: 2px solid @form__label;
+  width: 260px;
+  height: 142px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding-right: 64px;
+  padding-left: 15px;
+  padding-top: 15px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 300;
+
+  &:hover {
+    border: 2px solid @form__legend;
+  }
+
+  &:active {
+    border: 2px solid @form__legend;
+  }
+}
+
+.form__textarea::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 300;
+}
+
+.form__text {
+  margin-left: 30px;
+  margin-top: 12px;
+}
+
+.form__span {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  color: @page-form__text;
+}
+
+.form__btn {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: @best-product__description;
+  text-transform: uppercase;
+  border: 2px solid @best-product__description;
+  width: 260px;
+  height: 53px;
+  display: inline-block;
+  margin-top: 30px;
+  background-color: transparent;
+
+  &:hover {
+    background-color: @best-product__description;
+    color: @background-body;
+  }
+
+  &:active {
+    color: @best-product__btn__color;
+  }
+}
+
+.form__wrapper {
+  width: @mobail-width;
+  margin-right: auto;
+  margin-left: auto;
+}
