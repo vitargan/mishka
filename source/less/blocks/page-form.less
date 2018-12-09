@@ -18,3 +18,37 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (min-width: @tablet-width) {
+  .page-form__wrapper {
+    width: @tablet-width;
+  }
+
+  .page-form {
+    height: 1550px;
+  }
+
+  .page-form__text {
+    font-size: 17px;
+    line-height: 30px;
+    padding-top: 73px;
+    padding-left: 52px;
+    padding-right: 86px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-form__wrapper {
+    width: @desktop-width;
+  }
+
+  .page-form__text {
+    padding-left: 225px;
+    padding-right: 241px;
+    padding-top: 105px;
+  }
+
+  .page-form {
+    height: 1498px;
+  }
+}

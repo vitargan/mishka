@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #f3f3f3;
   box-sizing: border-box;
 
   &:hover path {
@@ -82,5 +82,122 @@
 
   &:active {
     color: @nav-active;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-nav__text--search {
+    display: none;
+  }
+
+  .main-nav__item {
+    border: none;
+  }
+
+  .main-nav__item--search {
+    width: 90px;
+    height: 88px;
+    position: absolute;
+    top: -88px;
+    right: -52px;
+    border-right: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+  .main-nav__item--basket {
+    position: absolute;
+    top: -87px;
+    left: 451px;
+    width: 303px;
+    height: 87px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .main-nav__text--basket {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .main-nav__link--basket {
+    padding-left: 36px;
+  }
+
+  .main-nav__link--form {
+    padding-left: 16px;
+  }
+
+
+  .main-nav__item--tablet {
+    height: 62px;
+    width: 200px;
+  }
+
+  .main-nav__item--catalog,
+  .main-nav__item--form {
+    height: 63px;
+    width: 200px;
+    background-color: @product-catalog__color;
+  }
+
+  .main-nav__link--catalog {
+    padding-left: 48px;
+  }
+
+  .main-nav__link--search {
+    padding-left: 43px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__item--search {
+    top: 0;
+    right: -332px;
+    height: 87px;
+  }
+
+  .main-nav {
+    width: @desktop-width;
+  }
+
+  .main-nav__item--basket {
+    top: 0;
+    left: 832px;
+  }
+
+  .main-nav__item--tablet {
+    width: 250px;
+    height: 87px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+
+  .main-nav__link--catalog {
+    padding-left: 51px;
+    padding-top: 3px;
+    height: 87px;
+    width: 183px;
+    border-right: 1px solid #f3f3f3;
+  }
+
+  .main-nav__link--form {
+
+    padding-left: 19px;
+    height: 83px;
+    padding-top: 3px;
+  }
+
+  .main-nav__item--catalog,
+  .main-nav__item--form {
+    background-color: @background-header;
   }
 }

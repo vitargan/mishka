@@ -121,3 +121,156 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (min-width: @tablet-width) {
+  .best-product {
+    min-height: 645px;
+    display: flex;
+    flex-direction: row;
+
+    &::after {
+      height: 15px;
+      bottom: 27px;
+    }
+  }
+
+  .best-product__titles {
+    width: 668px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 49px;
+    height: 86px;
+  }
+
+  .best-product__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: 40px;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .best-product__week {
+    font-size: 17px;
+    line-height: 20px;
+    width: 80px;
+    text-align: center;
+    margin-right: 24px;
+    margin-top: 48px;
+  }
+
+  .best-product__line {
+    height: 270px;
+    margin-top: 46px;
+    margin-left: 12px;
+  }
+
+  .best-product__description {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: -3px;
+    width: 280px;
+  }
+
+  .best-product__button {
+    font-size: 17px;
+    line-height: 20px;
+    width: 290px;
+    margin-top: 31px;
+    margin-left: 49px;
+  }
+
+  .best-product__price {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-left: 122px;
+  }
+
+  .best-product__table {
+    margin-top: 30px;
+  }
+
+  .best-product__img {
+    margin-top: 52px;
+    margin-left: 54px;
+    height: 402px;
+    width: 334px;
+    margin-bottom: 95px;
+  }
+
+  .best-product__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 768px;
+    align-content: space-between;
+    position: relative;
+  }
+
+  .best-product__block {
+    margin: 0;
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    height: 113px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .best-product {
+    min-height: 830px;
+    position: relative;
+
+    &::after {
+      height: 39px;
+      bottom: 27px;
+      background-position: center;
+      background-size: auto;
+    }
+  }
+
+  .best-product__wrapper {
+    width: @desktop-width;
+    flex-direction: column;
+    min-height: 815px;
+  }
+
+  .best-product__title {
+    order: 2;
+    font-size: 53px;
+    line-height: 57px;
+    z-index: 1;
+  }
+
+  .best-product__titles {
+    margin-top: 79px;
+    margin-left: 41px;
+  }
+
+  .best-product__week {
+    order: 1;
+    margin-top: 52px;
+    margin-left: 51px;
+  }
+
+  .best-product__line {
+    margin-top: 61px;
+    margin-left: 195px;
+  }
+
+  .best-product__table {
+    margin-top: 44px;
+  }
+
+  .best-product__block {
+    bottom: 124px;
+    left: 177px;
+  }
+
+  .best-product__img {
+    position: absolute;
+    right: 240px;
+    top: 11px;
+  }
+}

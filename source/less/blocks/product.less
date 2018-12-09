@@ -9,3 +9,27 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (min-width: @tablet-width) {
+  .product {
+    min-height: 1160px;
+    width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .product__wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    min-height: 700px;
+    width: @desktop-width;
+  }
+
+  .product__wrapper {
+    width: @desktop-width;
+  }
+}

@@ -144,3 +144,103 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    min-height: 520px;
+  }
+
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 24px;
+    padding-left: 43px;
+  }
+
+  .about-us__block {
+    min-height: 520px;
+  }
+
+  .about-us__wrapper {
+    width: 768px;
+    min-height: 520px;
+  }
+
+  .about-us__list {
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+    padding-left: 49px;
+  }
+
+  .about-us__item {
+    height: 140px;
+  }
+
+  .about-us__text {
+    font-size: 20px;
+    line-height: 22px;
+    min-height: 68px;
+    width: 202px;
+    margin-top: 103px;
+  }
+
+  .about-us__text--style {
+    margin-top: 118px;
+    width: 238px;
+  }
+
+  .about-us__text--like {
+    margin-top: 132px;
+  }
+
+  .about-us__text--love {
+    margin-right: 91px;
+    margin-top: 102px;
+    width: 244px;
+  }
+
+  .about-us__text--manufacturer {
+    margin-top: 119px;
+    width: 290px;
+  }
+
+  .about-us__text--gift {
+    margin-top: 133px;
+    width: 235px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    min-height: 608px;
+  }
+
+  .about-us__wrapper {
+    width: @desktop-width;
+    min-height: 600px;
+  }
+
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-left: 225px;
+    padding-top: 28px;
+  }
+
+  .about-us__block {
+    margin-left: 178px;
+  }
+
+  .about-us__text {
+    margin-right: 130px;
+  }
+
+  .about-us__text--materials,
+  .about-us__text--style,
+  .about-us__text--like {
+    margin-right: 110px;
+  }
+}
