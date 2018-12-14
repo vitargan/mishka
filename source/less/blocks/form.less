@@ -413,12 +413,15 @@
 
   .form__wrapper__checkbox {
     display: flex;
+    width: 768px;
+    box-sizing: border-box;
   }
 
   .form__block--checkbox {
     width: 668px;
     min-height: 303px;
     background-color: @checkbox-tablet-background;
+    box-sizing: border-box;
   }
 
   .form__list--checkbox {
@@ -436,6 +439,7 @@
     display: flex;
     list-style: none;
     height: 76px;
+
   }
 
   .form__legend--checkbox {
@@ -451,6 +455,10 @@
 
   .form__item--checkbox:nth-child(1) {
     margin-top: 0;
+  }
+
+  .form__item--checkbox:nth-child(6) {
+    margin-right: 0;
   }
 
   .form__item--tiffany {
@@ -533,11 +541,12 @@
   }
 
   .form__block--contacts {
-    min-height: 220px;
-    width: 100%;
+    min-height: 230px;
+    width: 766px;
     background-color: @checkbox-tablet-background;
     padding-bottom: 7px;
     padding-top: 0;
+    box-sizing: border-box;
   }
 
   .form__item--contacts {
@@ -746,6 +755,10 @@
 
   .form__list--contacts {
     width: 898px;
+  }
+
+  .form__block--contacts {
+    width: 100%;
   }
 
   .form__svg--mail,

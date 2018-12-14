@@ -27,6 +27,7 @@
     padding-top: 35px;
     padding-left: 47px;
     position: relative;
+    width: @tablet-width;
 
     &::after {
       content: " ";
@@ -55,16 +56,18 @@
 
 @media (min-width: @desktop-width) {
   .product-catalog {
-    min-height: 194px;
+    min-height: 259px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-
+    padding-top: 0;
+    padding-left: 0;
 
     &::after {
       height: 36px;
       background-size: auto 36px;
       background-repeat: repeat-x;
+      bottom: -12px;
     }
   }
 
@@ -75,6 +78,7 @@
   .product-catalog__title {
     font-size: 53px;
     line-height: 57px;
-    margin-left: 324px;
+    margin-top: 32px;
+    margin-left: 343px;
   }
 }

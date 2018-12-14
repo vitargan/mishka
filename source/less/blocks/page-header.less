@@ -4,7 +4,7 @@
   background-color: @background-header;
   display: flex;
   flex-direction: column;
-}
+ }
 
 .page-header__list {
   height: 79px;
@@ -39,10 +39,6 @@
   background-color: @background-body;
 }
 
-.page-header__block {
-  display: none;
-}
-
 .page-header__wrapper {
   width: @mobail-width;
   margin-right: auto;
@@ -66,36 +62,9 @@
 
   .page-header__list {
     width: 370px;
-    position: relative;
+
     height: 87px;
     border-right: 1px solid #ececec;
-  }
-
-  .page-header__block {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding-left: 90px;
-  }
-
-  .page-header__block--catalog {
-    display: block;
-    list-style: none;
-    padding-left: 90px;
-    background-color: @product-catalog__color;
-    margin: 0;
-    width: 262px;
-  }
-
-  .page-header__text {
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: 300;
-    color: @page-form__text;
-  }
-
-  .page-header__link {
-    display: none;
   }
 
   .page-header__togle {
@@ -114,33 +83,18 @@
     margin-left: 44px;
     margin-top: 5px;
   }
-
-  .page-header__item {
-    padding-top: 20px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
+    min-height: 87px;
     position: relative;
+
   }
 
   .page-header__wrapper {
     width: @desktop-width;
     position: relative;
-  }
-
-  .page-header__link {
-    display: block;
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: bold;
-    color: @nav-text;
-  }
-
-  .page-header__item {
-    display: flex;
-    padding-top: 0;
   }
 
   .page-header__list {
@@ -150,37 +104,8 @@
     width: 283px;
   }
 
-  .page-header__block {
-    padding-left: 50px;
-  }
-
-  .page-header__link--receipts {
-    margin-right: 67px;
-  }
-
-  .page-header__text {
-    margin-left: 511px;
-  }
-
   .page-header__logo {
     background-image: url("../img/logo-desktop.svg");
     width: 130px;
-  }
-
-  .page-header__block--catalog {
-    width: @desktop-width;
-  }
-
-  .page-header__link--catalog {
-    display: block;
-  }
-
-  .page-header__text--catalog {
-    display: block;
-  }
-
-  .page-header__item--catalog {
-    height: 64px;
-    align-items: center;
   }
 }
