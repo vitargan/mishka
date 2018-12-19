@@ -104,3 +104,132 @@
     color: @best-product__btn__color;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    min-height: 925px;
+  }
+
+  .contacts__wrapper {
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__block {
+    display: flex;
+    margin-top: 22px;
+    margin-left: 19px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: 60px;
+    margin-left: 48px;
+    position: relative;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      right: 54px;
+      top: -16px;
+    }
+  }
+
+  .contacts__item,
+  .contacts__mail {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .contacts__mail {
+    margin-left: 25px;
+    margin-right: 60px;
+  }
+
+  .contacts__table {
+    margin-bottom: 51px;
+  }
+
+  .contacts__item--address {
+    margin-right: 24px;
+  }
+
+  .contacts__item--street {
+    width: 225px;
+  }
+
+  .contacts__map {
+    width: 768px;
+    height: 457px;
+  }
+
+  .contacts__iframe {
+    width: 768px;
+    height: 457px;
+  }
+
+  .contacts__button {
+    margin-left: 268px;
+    margin-top: 51px;
+    width: 231px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    min-height: 636px;
+  }
+
+  .contacts__wrapper {
+    width: @desktop-width;
+    flex-direction: column;
+    position: relative;
+    min-height: 630px;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-top: 145px;
+    margin-left: 221px;
+
+    &::before {
+      left: -108px;
+      top: -9px;
+    }
+  }
+
+  .contacts__block {
+    flex-direction: column;
+  }
+
+  .contacts__table {
+    margin-left: 202px;
+    width: 365px;
+  }
+
+  .contacts__map {
+    position: absolute;
+    right: 52px;
+    top: 76px;
+    width: 525px;
+    height: 458px;
+  }
+
+  .contacts__iframe {
+    width: 525px;
+    height: 458px;
+  }
+
+  .contacts__button {
+    margin-left: 224px;
+    margin-top: 25px;
+  }
+}
