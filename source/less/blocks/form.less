@@ -10,7 +10,6 @@
   border: 0;
   margin: 0;
   padding: 0;
-  border-top: 1px solid @form__legend;
   width: 260px;
 }
 
@@ -33,6 +32,18 @@
   padding-right: 29px;
   padding-top: 7px;
   padding-left: 29px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: 200px;
+    background-color: #63d1bb;
+    right: 6px;
+    top: 14px;
+  }
 }
 
 .form__label {
@@ -358,9 +369,19 @@
     width: @tablet-width;
   }
 
+  .form {
+    min-height: 1408px;
+  }
+
   .form__label {
     font-size: 19px;
     line-height: 21px;
+  }
+
+  .form__legend {
+    &::before {
+      display: none;
+    }
   }
 
   .form__block {
@@ -637,6 +658,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form {
+    min-height: 1328px;
+  }
+
   .form__wrapper {
     width: 100%;
   }
@@ -759,18 +784,21 @@
 
   .form__block--contacts {
     width: 100%;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .form__svg--mail,
   .form__svg--phone {
     top: 33px;
-    right: 5px;
+    right: -7px;
   }
 
   .form__block--textarea {
     width: 1150px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 13px;
   }
 
   .form__legend--textarea {
