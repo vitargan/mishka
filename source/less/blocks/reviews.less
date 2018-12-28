@@ -139,7 +139,12 @@
     align-content: center;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 0 13px;
+    background-position: 0 17px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px 456px;
+    }
   }
 
   .reviews__title {
@@ -179,9 +184,9 @@
 
   .reviews__btn {
     position: absolute;
-    right: 34px;
+    right: 31px;
     top: 58px;
-    width: 174px;
+    width: 178px;
   }
 }
 
