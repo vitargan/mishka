@@ -2,6 +2,8 @@
   min-height: 160px;
   width: 100%;
   background-color: @page-footer__color;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .page-footer__social {
@@ -89,7 +91,7 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     min-height: 142px;
-    width: 768px;
+    width: 100%;
   }
 
   .page-footer__logo__svg {
@@ -106,7 +108,7 @@
 
   .page-footer__wrapper {
     flex-direction: row;
-    width: 768px;
+    width: @tablet-width;
   }
 
   .page-footer__logo__desktop {
