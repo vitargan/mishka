@@ -2,6 +2,8 @@
   min-height: 160px;
   width: 100%;
   background-color: @page-footer__color;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .page-footer__social {
@@ -11,7 +13,6 @@
   justify-content: space-between;
   box-sizing: border-box;
   margin-left: 30px;
-  margin-top: 10px;
   padding-right: 61px;
   padding-left: 58px;
   border-bottom: 1px solid #e5e5e5;
@@ -49,7 +50,7 @@
   height: 34px;
   fill: #63d1bb;
 
-  &:hover path {
+  &:hover {
     fill: @catalog__block--toys;
   }
 
@@ -62,7 +63,7 @@
   width: 22px;
   height: 22px;
 
-  &:hover path {
+  &:hover {
     fill: #63d1bb;
   }
 
@@ -90,6 +91,7 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     min-height: 142px;
+    width: 100%;
   }
 
   .page-footer__logo__svg {
@@ -106,6 +108,8 @@
 
   .page-footer__wrapper {
     flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
     width: 768px;
   }
 
@@ -133,6 +137,10 @@
     width: @desktop-width;
   }
 
+  .page-footer {
+    width: 100%;
+  }
+
   .page-footer__logo__desktop {
     margin-top: 53px;
     margin-right: 191px;
@@ -140,5 +148,9 @@
 
   .page-footer__social {
     margin-right: 191px;
+  }
+
+  .page-footer__block {
+    margin-top: 48px;
   }
 }

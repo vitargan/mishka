@@ -57,6 +57,7 @@
   width: 200px;
   margin-left: 29px;
   margin-top: 21px;
+  margin-bottom: 6px;
 }
 
 .goods__list {
@@ -73,8 +74,11 @@
 
 .goods__svg {
   cursor: pointer;
+  width: 20px;
+  height: 19px;
+  fill: #d3d2d2;
 
-  &:hover path {
+  &:hover {
     fill: @catalog__block--interior;
   }
 
@@ -88,8 +92,8 @@
     min-height: 332px;
     width: 668px;
     flex-direction: row;
-    margin-left: 50px;
     margin-bottom: 53px;
+    margin-left: 0;
   }
 
   .goods__block:nth-child(3) {
@@ -99,19 +103,67 @@
   .goods {
     margin-top: 82px;
   }
+
+  .goods__img__link {
+    height: 332px;
+  }
+
+  .goods__name {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .goods__item {
+    width: 250px;
+    margin-top: 24px;
+  }
+
+  .goods__characteristic {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .goods__price {
+    font-size: 17px;
+    line-height: 24px;
+    margin-left: 4px;
+  }
+
+  .goods__list {
+    margin-top: 173px;
+    width: 273px;
+  }
+
+  .goods__list--bigbasket {
+    margin-top: 153px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .goods__block {
-    min-height: 659px;
+    height: 659px;
     width: 314px;
     flex-direction: column;
+    margin-left: 50px;
   }
 
   .goods {
     display: flex;
     flex-direction: row;
     margin-top: 94px;
+  }
+
+  .goods__img__link {
+    height: 462px;
+  }
+
+  .goods__list {
+    margin-top: 37px;
+    width: 257px;
+  }
+
+  .goods__list--bigbasket {
+    margin-top: 13px;
   }
 
   .goods__block:nth-child(3) {
