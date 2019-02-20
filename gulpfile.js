@@ -10,6 +10,7 @@ var minify  = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
+var run = require("run-sequence");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -38,6 +39,17 @@ gulp.task("images", function () {
 gulp.task("webp", function () {
   return gulp.src("source/img/*.{png,jpg}")
     .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("copy", function() {
+  return gulp.src([
+    "source/fonts/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("server", function () {
