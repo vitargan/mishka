@@ -11,6 +11,10 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var run = require("run-sequence");
+var include = require("posthtml-include");
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var del = require("del");
 
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
@@ -19,26 +23,26 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream())
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css"));
+    .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/*.{png,jpg,svg}")
+  return gulp.src("build/img/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/*.{png,jpg}")
-    .pipe(gulp.dest("source/img"));
+  return gulp.src("build/img/*.{png,jpg}")
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("copy", function() {
@@ -54,7 +58,7 @@ gulp.task("copy", function() {
 
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -62,7 +66,32 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("build/*.html").on("change", server.reload);
+});
+
+gulp.task("html", function() {
+  return gulp.src("*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("sprite", function() {
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("start", gulp.series("css", "server"));
+
+gulp.task("build", function(done) {
+  run("clean", "copy", "images", "webp", "css", "sprite", "html", done);
+});
+
+gulp.task("clean", function() {
+  return del("build");
+});
