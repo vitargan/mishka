@@ -1,7 +1,12 @@
 .main-nav {
-  display: flex;
-  flex-direction: column;
   background-color: @background-header;
+  visibility: hidden;
+  position: absolute;
+  width: 320px;
+}
+
+.main-nav__open {
+  visibility: visible;
 }
 
 .main-nav__list {
@@ -91,6 +96,8 @@
     flex-direction: row;
     position: relative;
     z-index: 99;
+    visibility: visible;
+    width: 400px;
   }
 
   .main-nav__text--search {

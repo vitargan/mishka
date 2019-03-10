@@ -24,10 +24,10 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
-    .pipe(server.stream())
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function () {
@@ -66,8 +66,9 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("build/*.html", ["html"]);
+  gulp.watch("source/less/**/*.less", ["css"]);
+  gulp.watch("build/*.html").on("change", server.reload);
+  gulp.watch("build/js/*.js").on("change", server.reload);
 });
 
 gulp.task("html", function() {
@@ -88,6 +89,9 @@ gulp.task("sprite", function() {
 });
 
 
+gulp.task('clean', function () {
+    return del('build');
+});
 
 gulp.task("build", function(done) {
   run("clean", "copy", "css", "images", "webp", "sprite", "html", done);

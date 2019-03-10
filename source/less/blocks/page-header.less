@@ -1,11 +1,15 @@
 .page-header {
-  min-height: 395px;
+  min-height: 78px;
   width: 100%;
   background-color: @background-header;
   display: flex;
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
+}
+
+.page-header__height {
+  min-height: 394px;
 }
 
 .page-header__list {
@@ -39,10 +43,15 @@
   margin-top: 29px;
   margin-left: 65px;
   background-color: @background-body;
+  cursor: pointer;
+}
+
+.page-header__close {
+  display: none;
 }
 
 .page-header__open {
-  display: none;
+  display: block;
 }
 
 .page-header__wrapper {
