@@ -17,8 +17,6 @@ var posthtml = require("gulp-posthtml");
 var del = require("del");
 var watch = require('gulp-watch');
 
-
-
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -98,12 +96,9 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("build/img"));
 });
 
-
 gulp.task('clean', function () {
     return del('build');
 });
-
-
 
 gulp.task("build", function(done) {
   run("clean", "copy", "css", "images", "webp", "sprite", "html", done);

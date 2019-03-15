@@ -276,17 +276,21 @@
     </div>
   </footer>
 
-  <section class="select-size visually-hidden">
+  <section class="select-size">
     <h3 class="select-size__title">Добавить в корзину</h3>
     <form class="select-size__form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="select-size__block">
-        <legend class="select-size__legend">Выберите размер:</legend>
-        <input class="select-size__radio" type="radio" id="s" name="size">
-        <label class="select-size__label" for="s">s</label>
-        <input class="select-size__radio" type="radio" id="m" name="size">
-        <label class="select-size__label" for="m">m</label>
-        <input class="select-size__radio" type="radio" id="l" name="size">
-        <label class="select-size__label" for="l">l</label>
+        <div class="select-size__wrapper">
+          <h3 class="select-size__legend">Выберите размер:</h3>
+          <div class="select-size__item">
+            <input class="select-size__radio" type="radio" id="s" name="size">
+             <label class="select-size__label" for="s">s</label>
+            <input class="select-size__radio" type="radio" id="m" name="size">
+            <label class="select-size__label" for="m">m</label>
+            <input class="select-size__radio" type="radio" id="l" name="size">
+            <label class="select-size__label" for="l">l</label>
+          </div>
+        </div>
       </fieldset>
       <button class="select-size__btn" type="button">Добавить</button>
     </form>

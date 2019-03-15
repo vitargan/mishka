@@ -21,7 +21,41 @@
   padding-left: 75px;
 }
 
+.select-size__label {
+  margin-top: 30px;
+}
+
 .select-size__block {
   border: none;
   width: 260px;
+}
+
+.select-size__radio {
+  display: none;
+}
+
+.select-size__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-size__item {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.select-size__radio + .select-size__label::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 2px solid @form__label;
+  width: 80px;
+  height: 48px;
+  top: 13px;
+
+}
+
+.select-size__btn {
+  margin-top: 90px;
 }
