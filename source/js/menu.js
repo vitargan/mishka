@@ -5,11 +5,15 @@ var toggleOpen = document.querySelector(".page-header__open");
 var navOpen = document.querySelector(".main-nav__open");
 var pageHeader = document.querySelector(".page-header");
 
+  toggleOpen.classList.add("page-header__open");
+  nav.classList.add("main-nav__open");
+  pageHeader.classList.remove("page-header__height");
+
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
-  toggleOpen.classList.toggle("page-header__close");
-  toggleOpen.classList.remove("page-header__open");
+  toggleOpen.classList.toggle("page-header__open");
+  toggleOpen.classList.remove("page-header__close");
 });
 
  link.addEventListener("click", function (evt) {
@@ -26,3 +30,7 @@ link.addEventListener("click", function (evt) {
   evt.preventDefault();
   pageHeader.classList.toggle("page-header__height");
 });
+
+
+
+
