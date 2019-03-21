@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Mishka</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link rel="preload" href="fonts/opensanslight.woff2" as="font">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+
 </head>
 <body>
   <svg style="display:none">
@@ -51,14 +52,14 @@
     </symbol>
   </svg>
 
-  <header class="page-header">
+  <header class="page-header page-header__height">
     <div class="page-header__wrapper">
       <div class="page-header__list">
         <a class="page-header__logo"><img class="page-header__svg__logo" alt="мобильный логотип"  src="img/logo-mobile.svg"></a>
         <button type="button" class="page-header__togle">
-          <svg class="page-header__close" xmlns="http://www.w3.org/2000/svg" width="20.514" height="20.512"><path fill="#231F20" d="M20.513 1.414L19.099 0l-8.843 8.842L1.414 0 0 1.414l8.842 8.842L0 19.098l1.414 1.414 8.842-8.842 8.843 8.842 1.414-1.414-8.842-8.842z"/>
+          <svg class="page-header__open" xmlns="http://www.w3.org/2000/svg" width="20.514" height="20.512"><path fill="#231F20" d="M20.513 1.414L19.099 0l-8.843 8.842L1.414 0 0 1.414l8.842 8.842L0 19.098l1.414 1.414 8.842-8.842 8.843 8.842 1.414-1.414-8.842-8.842z"/>
           </svg>
-          <svg class="page-header__open"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.958px" height="14px" viewBox="0 0 19.958 14" enable-background="new 0 0 19.958 14" xml:space="preserve">
+          <svg class="page-header__close"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.958px" height="14px" viewBox="0 0 19.958 14" enable-background="new 0 0 19.958 14" xml:space="preserve">
             <rect fill="#231F20" width="19.958" height="2"/>
             <rect y="6" fill="#231F20" width="19.958" height="2"/>
             <rect y="12" fill="#231F20" width="19.958" height="2"/>
@@ -152,18 +153,20 @@
         </div>
         <div class="best-product__img">
           <picture>
+
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
             <source type="image/webp"  media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+
             <img src="img/triple-set-mobile@1x.jpg"  alt="фото товара" srcset="img/triple-set-mobile@2x.jpg 2x">
           </picture>
         </div>
         <p class="best-product__block">
           <span class="best-product__price">Цена: 990 руб.</span>
-          <a class="best-product__button">Заказать</a>
+          <a class="best-product__button js-modal-open">Заказать</a>
         </p>
       </div>
     </section>
@@ -276,20 +279,34 @@
     </div>
   </footer>
 
-  <section class="select-size visually-hidden">
-    <h3 class="select-size__title">Добавить в корзину</h3>
-    <form class="select-size__form" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="select-size__block">
-        <legend class="select-size__legend">Выберите размер:</legend>
-        <input class="select-size__radio" type="radio" id="s" name="size">
-        <label class="select-size__label" for="s">s</label>
-        <input class="select-size__radio" type="radio" id="m" name="size">
-        <label class="select-size__label" for="m">m</label>
-        <input class="select-size__radio" type="radio" id="l" name="size">
-        <label class="select-size__label" for="l">l</label>
-      </fieldset>
-      <button class="select-size__btn" type="button">Добавить</button>
-    </form>
-  </section>
+  <section class="select-size modal--closed">
+    <div class="select-size__overlay js-modal-close"></div>
+      <div class="select-size__body">
+        <h3 class="select-size__title">Добавить в корзину</h3>
+        <form class="select-size__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="select-size__block">
+            <div class="select-size__wrapper">
+              <h3 class="select-size__legend">Выберите размер:</h3>
+              <div class="select-size__item">
+                <input class="select-size__radio" type="radio" id="s" name="size">
+                <label class="select-size__label" for="s">s</label>
+                <input class="select-size__radio" type="radio" id="m" name="size">
+                <label class="select-size__label" for="m">m</label>
+                <input class="select-size__radio" type="radio" id="l" name="size">
+                <label class="select-size__label" for="l">l</label>
+              </div>
+            </div>
+          </fieldset>
+          <button class="select-size__btn js-modal-close" type="button">Добавить</button>
+        </form>
+      </div>
+    </section>
+  <script src="js/menu.js"></script>
+  <script src="js/picturefill.js"></script>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/modal.js"></script>
 </body>
 </html>
